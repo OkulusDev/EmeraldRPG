@@ -12,11 +12,13 @@ typedef struct {
 typedef struct {
 	Position pos;
 	char ch;
+	bool died;
 } Entity;
 
-Entity* createPlayer(Position start_pos);
+Entity* createPlayer(Position start_pos, char ch, bool died);
 void inputKeyboardHandle(int input);
 
 extern Entity* player;
+extern Entity* zombie;
 
 #endif

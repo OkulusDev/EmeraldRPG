@@ -1,11 +1,12 @@
 #include <player.h>
 
-Entity* createPlayer (Position start_pos) {
+Entity* createPlayer (Position start_pos, char ch, bool died) {
 	Entity* player = new Entity();
 
 	player->pos.y = start_pos.y;
 	player->pos.x = start_pos.x;
-	player->ch = '@';
+	player->died = died;
+	player->ch = ch;
 
 	return player;
 }
